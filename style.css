@@ -23,14 +23,19 @@ h1 {
   cursor: pointer;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 800px;
+}
+
 .imagen {
-  width: 50%;
-  float: left;
+  width: 100%;
 }
 
 .texto {
-  width: 50%;
-  float: right;
   padding: 20px;
 }
 
@@ -39,7 +44,6 @@ p {
 }
 
 .testimonio {
-  width: 100%;
   padding: 20px;
 }
 
@@ -52,4 +56,24 @@ footer {
 a {
   text-decoration: none;
 }
-Usa el código con pre
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+  }
+
+  .imagen {
+    width: 100%;
+    height: auto;
+  }
+
+  .texto {
+    padding: 0;
+  }
+
+  .testimonio {
+    padding: 0;
+  }
+}
